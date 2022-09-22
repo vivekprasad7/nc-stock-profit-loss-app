@@ -10,6 +10,7 @@ const output = document.querySelector("#output");
 
 
 function calculateProfitAndLoss (initial, quantity, current){
+    if (initial > 0 & quantity > 0 & current > 0){
     if (initial > current){
         //loss logic
         var loss =   (initial - current) * quantity;
@@ -28,6 +29,10 @@ function calculateProfitAndLoss (initial, quantity, current){
         output.innerText =("No pain no gain, no gain no pain.");
 
     }
+} else {
+    output.innerText =("Please enter valid details.");
+
+}
 }
 
 function outputHandler(){
